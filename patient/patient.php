@@ -19,13 +19,16 @@
         service();
     }
     function addPatient() {
-        echo '<form method="post" action="add_patient.php">
-        		ID: <input type="text" name="id"><br>
-                Name: <input type="text" name="name"><br>
-                Address: <input type="text" name="address"><br>
-                Contact: <input type="text" name="contact_number"><br>
-                Gender: <input type="text" name="gender"><br>
+        echo '<h2 style="margin-top:5%;margin-left:40%;">Add Patient Details</h2>
+        <form method="post" action="add_patient.php">
+        	<div style="margin-top:1%;margin-left:40%;font-size:25px;">
+        		ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="id"><br><br><br>
+                Name:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name"><br><br><br>
+                Address:  &nbsp;<input type="text" name="address"><br><br><br>
+                Contact:   &nbsp;&nbsp;<input type="text" name="contact_number"><br><br><br>
+                Gender:   &nbsp;&nbsp;&nbsp;<input type="text" name="gender"><br><br><br>
                 <input type="submit" value="commit">
+                </div>
               </form>';
     }
     function showPatient() {
@@ -68,14 +71,17 @@
           }
     }
     function editPatient(){
-        echo '<form method="post" action="edit_patient.php">
-            ID: <input type="text" name="id"><br>
-            Name: <input type="text" name="name"><br>
-            Address: <input type="text" name="address"><br>
-            Contact: <input type="text" name="contact_number"><br>
-            Gender: <input type="text" name="gender"><br>
-            <input type="submit" value="commit">
-        </form>';
+        echo '<h2 style="margin-top:5%;margin-left:40%;">Edit Patient Details</h2>
+        <form method="post" action="edit_patient.php">
+        	<div style="margin-top:1%;margin-left:40%;font-size:25px;">
+        		ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="id"><br><br><br>
+                Name:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name"><br><br><br>
+                Address:  &nbsp;<input type="text" name="address"><br><br><br>
+                Contact:   &nbsp;&nbsp;<input type="text" name="contact_number"><br><br><br>
+                Gender:   &nbsp;&nbsp;&nbsp;<input type="text" name="gender"><br><br><br>
+                <input type="submit" value="commit">
+                </div>
+              </form>';
     }
     function deletePatient(){
         echo '<form method="post" action="delete_patient.php">
