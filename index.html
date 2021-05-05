@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="index.css">
+        <title>F Society Hospital</title>
+    </head>
+    <body style="background-image:url(assets/blur-hospital.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color:white">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark justify-content-between">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="patient.html">Patient</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="billing.html">Billing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="surgery.html">Surgery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="operation_theatre.html">Operation Theatre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="appointment.html">Appointment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctor.html">Doctor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="epatient.html">Emergency Patient</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nurse.html">Nurse</a>
+                    </li>
+                    <li style="float: right;" class="nav-text dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Sign In</a>
+                            <a class="dropdown-item" href="#">Sign Up</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <h2 style="margin:2%0%2%0%; color:black">F Society Hospital</h2>
+            <div class="row">
+                <div class="column">
+                    <p style="color:black">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi in nulla posuere sollicitudin. Diam vel quam elementum pulvinar etiam non quam lacus. Mattis molestie a iaculis at erat pellentesque adipiscing commodo. Sodales ut eu sem integer vitae. Tristique nulla aliquet enim tortor at auctor urna. Adipiscing enim eu turpis egestas. Facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Tristique sollicitudin nibh sit amet. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Elementum integer enim neque volutpat ac. Maecenas accumsan lacus vel facilisis volutpat est. Vel orci porta non pulvinar neque laoreet suspendisse.
+                    </p>
+                    <p style="color:black">
+                        Magna etiam tempor orci eu lobortis elementum. Nascetur ridiculus mus mauris vitae ultricies leo integer. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Pretium aenean pharetra magna ac placerat vestibulum lectus. Urna et pharetra pharetra massa. Feugiat nisl pretium fusce id. Nec ultrices dui sapien eget. Aliquam id diam maecenas ultricies. Sit amet luctus venenatis lectus magna fringilla urna. Enim eu turpis egestas pretium. Morbi enim nunc faucibus a pellentesque sit. Nulla facilisi morbi tempus iaculis urna id volutpat lacus. Turpis egestas maecenas pharetra convallis posuere morbi leo. Nunc consequat interdum varius sit. Placerat in egestas erat imperdiet. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh. Amet dictum sit amet justo donec. Vitae justo eget magna fermentum iaculis.
+                    </p>
+                </div>
+                <div class="column" style="color:black">
+                    <form action="user_validation.php" method="post">
+                        <div class="container">
+                          <label for="uname"><b>Username</b></label>
+                          <input type="text" placeholder="Enter Username" name="uname" required>
+                          <label for="psw"><b>Password</b></label>
+                          <input type="password" placeholder="Enter Password" name="psw" required>
+                          <button class="btn btn-primary" type="submit">Login</button>
+                          <button class="btn btn-primary" type="submit">SignUp</button>
+                          <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                          </label>
+                        </div>
+                        <div class="container" style="background-color:#f1f1f1">
+                          <button class="btn btn-danger" type="button" class="cancelbtn">Cancel</button>
+                          <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
