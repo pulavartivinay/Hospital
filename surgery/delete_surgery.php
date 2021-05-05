@@ -11,6 +11,7 @@
     <title>Delete Surgery</title>
 </head>
 <body style="background-color:#383A59; color:white">
+    <div class="container">
     <?php
         $SURGERYID=$_POST["id"];
         try {
@@ -35,5 +36,6 @@
             die();
         }
     ?>
+    </div>
 </body>
 </html>

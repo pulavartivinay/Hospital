@@ -11,6 +11,7 @@
     <title>Filtered Results</title>
 </head>
 <body style="background-color:#383A59; color:white">
+    <div class="container">
     <?php
         $SEARCHKEY=$_POST["searchkey"];
         try {
@@ -50,5 +51,6 @@
             die();
         }
     ?>
+    </div>
 </body>
 </html>

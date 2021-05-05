@@ -17,7 +17,7 @@
             $username = "root";
             $password = "Saivipul@1729";
             $database = "hospital";
-            $table = "patient";
+            $table = "surgery";
             $mysqli = new mysqli("localhost", $username, $password, $database);
             echo '<h2 style="margin:2%0%2%0%">SURGERY</h2><ol>';
             $query = "SELECT * FROM surgery";

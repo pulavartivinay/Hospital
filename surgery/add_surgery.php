@@ -11,6 +11,7 @@
     <title>Adding Surgery Entry</title>
 </head>
 <body style="background-color:#383A59; color:white">
+    <div class="container">
     <?php
         $SURGERYID=$_POST["id"];
         $PATIENTID=$_POST["patient_id"];
@@ -31,7 +32,7 @@
                 echo "$PATIENTNAME<br>";
                 echo "$TIMEOFSURGERY<br>";
                 echo '<form method="post" action="surgery.html">
-                    <input type="submit" value="go back">
+                    <input class="btn btn-danger" type="submit" value="Back">
                     </form>';
             } else {
                 echo "FAILED TO ADD DATA<br>";
@@ -41,5 +42,6 @@
             die();
         }
     ?>
+    </div>
 </body>
 </html>

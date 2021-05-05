@@ -11,6 +11,7 @@
     <title>Edit Surgery</title>
 </head>
 <body style="background-color:#383A59; color:white">
+    <div class="container">
     <?php
         $SURGERYID=$_POST["id"];
         $PATIENTID=$_POST["patient_id"];
@@ -42,5 +43,6 @@
             die();
         }
     ?>
+    </div>
 </body>
 </html>
