@@ -14,6 +14,7 @@
         $query = "update patient set id = '$PATIENTID', name = '$PATIENTNAME', address = '$PATIENTADDRESS', contact_number = '$PATIENTCONTACT', gender = '$PATIENTGENDER' where id = '$PATIENTID'";
         $result = $mysqli->query($query);
         if ($result == 1){
+            echo '<script>alert("Successfully Edited")</script>';
             echo "successfully edited<br>";
             echo "$PATIENTID<br>";
             echo "$PATIENTNAME<br>";
@@ -24,6 +25,7 @@
                 <input type="submit" value="go back">
               </form>';
         } else {
+            echo '<script>alert("FAILED TO UPDATE DATA")</script>';
             echo "FAILED TO UPDATE DATA<br>";
         }
         

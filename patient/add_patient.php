@@ -14,6 +14,7 @@
         $query = "INSERT INTO patient (id, name, address, contact_number, gender) VALUES ('$PATIENTID', '$PATIENTNAME', '$PATIENTADDRESS', '$PATIENTCONTACT', '$PATIENTGENDER')";
         $result = $mysqli->query($query);
         if ($result == 1){
+            echo '<script>alert("Successfully Added")</script>';
             echo "successfully added<br>";
             echo "$PATIENTID<br>";
             echo "$PATIENTNAME<br>";
@@ -24,6 +25,7 @@
                 <input type="submit" value="go back">
               </form>';
         } else {
+            echo '<script>alert("FAILED TO ADD DATA")</script>';
             echo "FAILED TO ADD DATA<br>";
         }
         
