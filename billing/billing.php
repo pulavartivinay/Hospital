@@ -19,25 +19,31 @@
         service();
     }
     function addBilling() {
-        echo '<form method="post" action="add_billing.php">
-                ID: <input type="text" name="id"><br>
-                Type: <input type="text" name="type"><br>
-                Patient_ID: <input type="text" name="patient_id"><br>
-                Amount: <input type="text" name="amount"><br>
-                Date: <input type="text" name="date"><br>
-                Contact: <input type="text" name="contact_number"><br>
-                <input type="submit">
+    	echo '<h2 style="margin-top:5%;margin-left:40%;">Add Billing Details</h2>
+        <form method="post" action="add_billing.php">
+        	<div style="margin-top:1%;margin-left:40%;font-size:25px;">
+        		ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="id"><br><br><br>
+                Type:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="type"><br><br><br>
+                Patient_ID:  &nbsp;<input type="text" name="patient_id"><br><br><br>
+                Amount: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="amount"><br><br><br>
+                Date: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="date"><br><br><br>
+                Contact:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="contact_number"><br><br><br>
+                <input type="submit" value="commit">
+                </div>
               </form>';
     }
     function editBilling() {
-        echo '<form method="post" action="edit_billing.php">
-                ID: <input type="text" name="id"><br>
-                Type: <input type="text" name="type"><br>
-                Patient_ID: <input type="text" name="patient_id"><br>
-                Amount: <input type="text" name="amount"><br>
-                Date: <input type="text" name="date"><br>
-                Contact: <input type="text" name="contact_number"><br>
-                <input type="submit">
+        echo '<h2 style="margin-top:5%;margin-left:40%;">Edit Billing Details</h2>
+        <form method="post" action="edit_billing.php">
+        	<div style="margin-top:1%;margin-left:40%;font-size:25px;">
+        		ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="id"><br><br><br>
+                Type:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="type"><br><br><br>
+                Patient_ID:  &nbsp;<input type="text" name="patient_id"><br><br><br>
+                Amount: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="amount"><br><br><br>
+                Date: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="date"><br><br><br>
+                Contact:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="contact_number"><br><br><br>
+                <input type="submit" value="commit">
+                </div>
               </form>';
     }
     function deleteBilling() {
