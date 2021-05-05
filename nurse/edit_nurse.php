@@ -35,7 +35,7 @@
                 } else {
                     echo "FAILED TO EDIT DATA<br>";
                 }
-                
+
             } catch (mysqli_sql_exception $e) {
                 print "Error!: " . $e->getMessage() . "<br/>";
                 die();
