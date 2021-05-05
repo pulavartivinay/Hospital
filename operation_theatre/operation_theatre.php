@@ -50,7 +50,7 @@
                     </div>
                     </div>
                     <div class="form-group row">
-                    <label for="colFormLabel" class="col-sm-2 col-form-label">Availability</label>
+                    <label for="colFormLabel" class="col-sm-2 col-form-label">Filled Status</label>
                     <div class="col-sm-10">
                         <input type="text" id="colFormLabel" name="availability" required>
                     </div>
@@ -91,7 +91,7 @@
                     </div>
                     </div>
                     <div class="form-group row">
-                    <label for="colFormLabel" class="col-sm-2 col-form-label">Availability</label>
+                    <label for="colFormLabel" class="col-sm-2 col-form-label">Filled Status</label>
                     <div class="col-sm-10">
                         <input type="text" id="colFormLabel" name="time_of_surgery">
                     </div>
