@@ -1,5 +1,9 @@
 # Hospital
 
+## Landing Page
+- user page: Hospital/user.html
+- home page: Hospital/home.html
+
 ## Guidelines to contributors
 - pull the code
 - start working only on the folders corresponding to the work associated to you. For example, if you are assigned `patient` and `billing`, then you are only supposed to work and push to those corresponding folders

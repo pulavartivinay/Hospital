@@ -28,7 +28,7 @@
                 $var_str1 = var_export($username, true);
                 $var_str2 = var_export($password, true);
                 $var = "<?php\n\$username=$var_str1; \n\$password=$var_str2;\n?>";
-                file_put_contents('globals.php', $var);
+                file_put_contents('../globals.php', $var);
                 header('Location: ../home.html');
             } catch (mysqli_sql_exception $e) {
                 print "Error!: " . $e->getMessage() . "<br/>";
