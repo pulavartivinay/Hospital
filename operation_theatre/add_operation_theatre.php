@@ -19,8 +19,7 @@
         $AVAILABILITY=$_POST["availability"];
         $ROOMNUMBER=$_POST["room_number"];
         try {
-            $username = "root";
-            $password = "Saivipul@1729";
+            include '../globals.php';
             $database = "hospital";
             $table = "operation_theatre";
             $mysqli = new mysqli("localhost", $username, $password, $database);

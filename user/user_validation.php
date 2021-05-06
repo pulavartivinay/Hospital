@@ -29,10 +29,7 @@
                 $var_str2 = var_export($password, true);
                 $var = "<?php\n\$username=$var_str1; \n\$password=$var_str2;\n?>";
                 file_put_contents('globals.php', $var);
-                header('Location: /Hospital/index.html');
-                // echo '<form method="post" action="index.html">
-                //     <input class="btn btn-danger" type="submit" value="Back">
-                // </form>';
+                header('Location: ../home.html');
             } catch (mysqli_sql_exception $e) {
                 print "Error!: " . $e->getMessage() . "<br/>";
                 die();

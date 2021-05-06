@@ -45,8 +45,7 @@
             }
             function showAppointment() {
                 try {
-                    $username = "root";
-                    $password = "Saivipul@1729";
+                    include '../globals.php';
                     $database = "hospital";
                     $table = "appointment";
                     $mysqli = new mysqli("localhost", $username, $password, $database);

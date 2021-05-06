@@ -10,8 +10,7 @@
             $DOCTORWORKINGHOURS=$_POST["working_hours"];
             $DOCTORSALARY=$_POST["salary"]; 
             try {
-                $username = "root";
-                $password = "Saivipul@1729";
+                include '../globals.php';
                 $database = "hospital";
                 $table = "doctor";
                 $mysqli = new mysqli("localhost", $username, $password, $database);

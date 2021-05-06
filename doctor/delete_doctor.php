@@ -1,11 +1,9 @@
 <html>
     <body>
         <?php
-	        
             $DOCTORID=$_POST["id"];
             try {
-                $username = "root";
-                $password = "Saivipul@1729";
+                include '../globals.php';
                 $database = "hospital";
                 $table = "doctor";
                 $mysqli = new mysqli("localhost", $username, $password, $database);

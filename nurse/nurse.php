@@ -55,8 +55,7 @@
             }
             function showPatient() {
                 try {
-                    $username = "root";
-                    $password = "Saivipul@1729";
+                    include '../globals.php';
                     $database = "hospital";
                     $table = "emergency_patient";
                     $mysqli = new mysqli("localhost", $username, $password, $database);
@@ -103,8 +102,7 @@
             }
             function searchPatient(){
                 try {
-                    $username = "root";
-                    $password = "Saivipul@1729";
+                    include '../globals.php';
                     $database = "hospital";
                     $table = "patient";
                     $mysqli = new mysqli("localhost", $username, $password, $database);

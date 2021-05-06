@@ -9,8 +9,7 @@
             $APPOINTMENT_DATE_TIME=$_POST["date_and_time"]; 
             $APPOINTMENT_REASON=$_POST["reason"];
             try {
-                $username = "root";
-                $password = "Saivipul@1729";
+                include '../globals.php';
                 $database = "hospital";
                 $table = "appointment";
                 $mysqli = new mysqli("localhost", $username, $password, $database);

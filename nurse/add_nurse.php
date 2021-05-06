@@ -11,8 +11,7 @@
             $DATA7=$_POST["working_hrs"];
             $DATA8=$_POST["salary"];
             try {
-                $username = "root";
-                $password = "Saivipul@1729";
+                include '../globals.php';
                 $database = "hospital";
                 $table = "emergency_patient";
                 $mysqli = new mysqli("localhost", $username, $password, $database);

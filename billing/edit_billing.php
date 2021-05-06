@@ -6,8 +6,7 @@
     $BILLINGDATE=$_POST["date"];
     $BILLINGCONTACT=$_POST["contact_number"]; 
     try {
-        $username = "root";
-        $password = "Saivipul@1729";
+        include '../globals.php';
         $database = "hospital";
         $table = "billing";
         $mysqli = new mysqli("localhost", $username, $password, $database);

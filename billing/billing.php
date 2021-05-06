@@ -55,8 +55,7 @@
     }
     function showBilling() {
         try {
-            $username = "root";
-            $password = "Saivipul@1729";
+            include '../globals.php';
             $database = "hospital";
             $table = "billing";
             $mysqli = new mysqli("localhost", $username, $password, $database);
@@ -97,8 +96,7 @@
     }
     function searchBilling() {
         try {
-            $username = "root";
-            $password = "Saivipul@1729";
+            include '../globals.php';
             $database = "hospital";
             $table = "billing";
             $mysqli = new mysqli("localhost", $username, $password, $database);
@@ -140,8 +138,7 @@
     }
     function service() {
         try {
-            $username = "root";
-            $password = "Saivipul@1729";
+            include '../globals.php';
             $database = "hospital";
             $table = "billing";
             $mysqli = new mysqli("localhost", $username, $password, $database);

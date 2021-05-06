@@ -18,8 +18,7 @@
         $PATIENTNAME=$_POST["patient_name"];
         $TIMEOFSURGERY=$_POST["time_of_surgery"];
         try {
-            $username = "root";
-            $password = "Saivipul@1729";
+            include '../globals.php';
             $database = "hospital";
             $table = "surgery";
             $mysqli = new mysqli("localhost", $username, $password, $database);

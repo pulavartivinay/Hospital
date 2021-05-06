@@ -8,8 +8,7 @@
             $PATIENTCONTACT=$_POST["contact_number"];
             $PATIENTGENDER=$_POST["gender"];
             try {
-                $username = "root";
-                $password = "Saivipul@1729";
+                include '../globals.php';
                 $database = "hospital";
                 $table = "emergency_patient";
                 $mysqli = new mysqli("localhost", $username, $password, $database);

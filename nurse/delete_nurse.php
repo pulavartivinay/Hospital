@@ -4,8 +4,7 @@
 	        echo '<body style="background-color:#383A59; color:white">';
             $PATIENTID=$_POST["id"];
             try {
-                $username = "root";
-                $password = "Saivipul@1729";
+                include '../globals.php';
                 $database = "hospital";
                 $table = "emergency_patient";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
