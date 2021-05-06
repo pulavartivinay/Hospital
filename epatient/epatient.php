@@ -34,25 +34,35 @@
             else if(array_key_exists('searchPatient', $_POST)) {
                 searchPatient();
             }
+            else if(array_key_exists('searchTreatment', $_POST)) {
+                // echo "hi";
+                searchTreatment();
+            }
             function addPatient() {
-                echo '<form method="post" action="add_e_patient.php">
-                		ID: <input type="text" name="id"><br>
-                        Name: <input type="text" name="name"><br>
-                        Address: <input type="text" name="address"><br>
-                        Contact: <input type="text" name="contact_number"><br>
-                        Gender: <input type="text" name="gender"><br>
+                echo '<h2 style="margin-top:5%;margin-left:40%;">Add Emergency Patient Details</h2>
+                <form method="post" action="add_e_patient.php">
+                    <div style="margin-top:1%;margin-left:40%;font-size:25px;">
+                        ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="id"><br><br><br>
+                        Name:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name"><br><br><br>
+                        Address:  &nbsp;<input type="text" name="address"><br><br><br>
+                        Contact:   &nbsp;&nbsp;<input type="text" name="contact_number"><br><br><br>
+                        Gender:   &nbsp;&nbsp;&nbsp;<input type="text" name="gender"><br><br><br>
                         <input type="submit" value="commit">
-                      </form>';
+                    </div>
+                </form>';
             }
             function editPatient() {
-                echo '<form method="post" action="edit_e_patient.php">
-                		ID: <input type="text" name="id"><br>
-                        Name: <input type="text" name="name"><br>
-                        Address: <input type="text" name="address"><br>
-                        Contact: <input type="text" name="contact_number"><br>
-                        Gender: <input type="text" name="gender"><br>
-                        <input type="submit" value="commit">
-                      </form>';
+                echo '<h2 style="margin-top:5%;margin-left:40%;">Edit Emergency Patient Details</h2>
+                    <form method="post" action="edit_e_patient.php">
+                        <div style="margin-top:1%;margin-left:40%;font-size:25px;">
+                            ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="id"><br><br><br>
+                            Name:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name"><br><br><br>
+                            Address:  &nbsp;<input type="text" name="address"><br><br><br>
+                            Contact:   &nbsp;&nbsp;<input type="text" name="contact_number"><br><br><br>
+                            Gender:   &nbsp;&nbsp;&nbsp;<input type="text" name="gender"><br><br><br>
+                            <input type="submit" value="commit">
+                        </div>
+                    </form>';
             }
             function deletePatient() {
                 echo '<form method="post" action="delete_e_patient.php">
@@ -130,6 +140,50 @@
                                     <td> <font face="Monospace">'.$field3name.'</td> 
                                     <td> <font face="Monospace">'.$field4name.'</td> 
                                     <td> <font face="Monospace">'.$field5name.'</td> 
+                                </tr>';
+                    }
+                    $result->free();
+                    echo "</ol>";
+                    } catch (mysqli_sql_exception $e) {
+                        print "Error!: " . $e->getMessage() . "<br/>";
+                        die();
+                    }
+            }
+            function searchTreatment(){
+                try {
+                    // echo "hi";
+                    $username = "root";
+                    $password = "guru";
+                    $database = "hospital";
+                    $table = "patient";
+                    $mysqli = new mysqli("localhost", $username, $password, $database);
+                    $SEARCHID=$_POST["searchTreatment"];
+                    echo "<h2>Results</h2><ol>";
+                    $query = "call get_treatment_details('$SEARCHID')";
+                    $result = $mysqli->query($query);
+                    echo '<table border="1" cellspacing="2" cellpadding="2"> 
+                        <tr> 
+                            <td> <font face="Monospace">Epatient ID</font> </td> 
+                            <td> <font face="Monospace">Epatient Name</font> </td> 
+                            <td> <font face="Monospace">Doctor ID</font> </td> 
+                            <td> <font face="Monospace">Doctor Name</font> </td>
+                            <td> <font face="Monospace">Nurse ID</font> </td>
+                            <td> <font face="Monospace">Nurse Name</font> </td>
+                        </tr>';
+                    while ($row = $result->fetch_assoc()) {
+                            $field1name = $row["epatient_id"];
+                            $field2name = $row["epatient_name"];
+                            $field3name = $row["doctor_id"];
+                            $field4name = $row["doctor_name"];
+                            $field5name = $row["nurse_id"];
+                            $field6name = $row["nurse_name"];
+                            echo '<tr> 
+                                    <td> <font face="Monospace">'.$field1name.'</td> 
+                                    <td> <font face="Monospace">'.$field2name.'</td> 
+                                    <td> <font face="Monospace">'.$field3name.'</td> 
+                                    <td> <font face="Monospace">'.$field4name.'</td> 
+                                    <td> <font face="Monospace">'.$field5name.'</td> 
+                                    <td> <font face="Monospace">'.$field6name.'</td> 
                                 </tr>';
                     }
                     $result->free();
