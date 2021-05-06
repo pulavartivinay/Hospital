@@ -44,9 +44,12 @@
                     <a class="nav-link" href="../nurse/nurse.html">Nurse</a>
                 </li>
                 <li style="float: right;" class="nav-text dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Account
-                    </a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="../user.html">Sign In</a>
+                        <a class="dropdown-item" href="../user.html">Sign Up</a>
+                        <a class="dropdown-item" href="../user/logout.php">Log Out</a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -62,7 +65,7 @@
          <div style="margin: 5% 20px 0px 20%">
         	<h3>Search the doctor by name, id and contact number</h3>
         	<form action="patient.php">
-			<input style="margin: 3% 0px 0px 10%" type="text" name="searchDoctor" 				placeholder="Search Doctor">
+			<input style="margin: 3% 0px 0px 10%" type="text" name="searchDoctor" placeholder="Search Doctor">
 			<button type="submit"><i class="fa fa-search"></i></button>
 		</form>
         </div>
