@@ -1,6 +1,6 @@
-<html>
-    <body>
-        <?php
+<?php
+        echo'<body style="background-color:#383A59; color:white">';
+        
             $APPOINTMENT_ID=$_POST["id"];
             $APPOINTMENT_PATIENT_ID=$_POST["patient_id"];
             $APPOINTMENT_PATIENT_NAME=$_POST["patient_name"];
@@ -16,6 +16,7 @@
                 
                 $result = $mysqli->query($query);
                 if ($result == 1){
+                    echo '<script>alert("Successfully Added")</script>';
                     echo "successfully added<br>";
                     echo "$APPOINTMENT_ID<br>";
                     echo "$APPOINTMENT_PATIENT_ID<br>";
@@ -27,6 +28,7 @@
                         <input type="submit" value="go back">
                       </form>';
                 } else {
+                    echo '<script>alert("FAILED TO ADD DATA")</script>';
                     echo "FAILED TO ADD DATA<br>";
                 }
                 
@@ -36,4 +38,4 @@
             }
         ?>
     </body>
-</html> 
+ 
