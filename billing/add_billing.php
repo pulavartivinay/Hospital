@@ -7,7 +7,7 @@
     $BILLINGCONTACT=$_POST["contact_number"]; 
     try {
         $username = "root";
-        $password = "";
+        $password = "Saivipul@1729";
         $database = "hospital";
         $table = "billing";
         $mysqli = new mysqli("localhost", $username, $password, $database);

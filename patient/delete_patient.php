@@ -5,7 +5,7 @@
             $PATIENTID=$_POST["id"];
             try {
                 $username = "root";
-                $password = "guru";
+                $password = "Saivipul@1729";
                 $database = "hospital";
                 $table = "patient";
                 $mysqli = new mysqli("localhost", $username, $password, $database);

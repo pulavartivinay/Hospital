@@ -146,7 +146,7 @@
             function showDoctor() {
                 try {
                     $username = "root";
-                    $password = "aMRm$2018";
+                    $password = "Saivipul@1729";
                     $database = "hospital";
                     $table = "doctor";
                     $mysqli = new mysqli("localhost", $username, $password, $database);

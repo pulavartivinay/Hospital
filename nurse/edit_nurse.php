@@ -12,7 +12,7 @@
             $DATA8=$_POST["salary"];
             try {
                 $username = "root";
-                $password = "guru";
+                $password = "Saivipul@1729";
                 $database = "hospital";
                 $table = "emergency_patient";
                 $mysqli = new mysqli("localhost", $username, $password, $database);

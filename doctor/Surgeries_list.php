@@ -2,7 +2,7 @@
         <?php
             echo '<body style="background-color:#383A59; color:white">';
             $DOCTORID=$_POST["id"];
-            $conn = mysqli_connect("localhost","root","aMRm$2018","hosp");
+            $conn = mysqli_connect("localhost","root","Saivipul@1729","hospital");
             if($conn->connect_error)
 		{
 			die("Failed connection:".$conn-> connect_error);
