@@ -47,10 +47,12 @@
         }
         function Signup(){
             try {
+                $admin_username="root";
+                $admin_password="Saivipul@1729";
                 $username=$_POST["uname"];
                 $password=$_POST["psw"];
                 $database="hospital";
-                $mysqli = new mysqli("localhost", "root", "Saivipul@1729", $database);
+                $mysqli = new mysqli("localhost", $admin_username, $admin_password, $database);
                 $create_user_query = "CREATE user '$username' IDENTIFIED BY '$password'";
                 $grant_priv_query = "GRANT SELECT ON $database.* TO $username";
                 echo $grant_priv_query;
