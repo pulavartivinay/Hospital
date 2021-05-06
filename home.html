@@ -10,6 +10,14 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <title>F Society Hospital</title>
     </head>
+    <style>
+        .row {
+            display: flex;
+        }
+        .column {
+            flex: 50%;
+        }
+    </style>
     <body style="background-image:url(assets/blur-hospital.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color:white">
         <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark justify-content-between">
             <a style="padding-left: 2%;" class="navbar-brand" href="home.html">Home</a>
@@ -58,12 +66,68 @@
             <div class="row">
                 <div class="column">
                     <p style="color:black">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi in nulla posuere sollicitudin. Diam vel quam elementum pulvinar etiam non quam lacus. Mattis molestie a iaculis at erat pellentesque adipiscing commodo. Sodales ut eu sem integer vitae. Tristique nulla aliquet enim tortor at auctor urna. Adipiscing enim eu turpis egestas. Facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Tristique sollicitudin nibh sit amet. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Elementum integer enim neque volutpat ac. Maecenas accumsan lacus vel facilisis volutpat est. Vel orci porta non pulvinar neque laoreet suspendisse.
+                        Hospital Management System is majorly to organise Patients, Employees and Services provided. Patients are the customers of the Hospital Management System, every data corresponding to the Patients must be stored and they must be provided with Services or Medication requested. There are three categories of persons who enter the Hospital. Patient, the person who is entering the Hospital for medical treatment. Visitor, the person who is entering the Hospital for visiting other patients. Emergency Patient, the person who is entering the Hospital with dire need of medical attention. In the case of an Emergency Patient the information collected need not be collected with the information, they are assigned with an id and rushed to the emergency ward. The patient can either avail the services which require no doctor prescription, provided by the hospital like Blood test, Urine test, Coronavirus test, ECG, X-Ray, Medicines etc or book an appointment to visit the doctor. The appointment booking will be for a doctor who is an expert in the area in which the patient requires consultation. The doctor then consults the patient either asking him to avail the services like MRI Scanning, CT Scanning, X-Ray, Blood test, medicines or in more serious situations perform surgery on the patient. The details regarding the surgeries are also stored. The surgeries are scheduled in operation theatres, so the assignment of an operation theatre to a patient is very crucial. After the surgery the patient is admitted into admit rooms and advised to stay in the admit rooms for a certain period of time before discharging from the hospital. Emergency patients and surgery undergoing patients are attended by the nurses. Who are the employees of the hospital like doctors? Employees are the backbone of the hospital.
                     </p>
                     <p style="color:black">
-                        Magna etiam tempor orci eu lobortis elementum. Nascetur ridiculus mus mauris vitae ultricies leo integer. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Pretium aenean pharetra magna ac placerat vestibulum lectus. Urna et pharetra pharetra massa. Feugiat nisl pretium fusce id. Nec ultrices dui sapien eget. Aliquam id diam maecenas ultricies. Sit amet luctus venenatis lectus magna fringilla urna. Enim eu turpis egestas pretium. Morbi enim nunc faucibus a pellentesque sit. Nulla facilisi morbi tempus iaculis urna id volutpat lacus. Turpis egestas maecenas pharetra convallis posuere morbi leo. Nunc consequat interdum varius sit. Placerat in egestas erat imperdiet. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh. Amet dictum sit amet justo donec. Vitae justo eget magna fermentum iaculis.
+                        The commercial part of the Hospital Management System relies on three major commodities. Services availment, Surgery payments. After the patient avails the services provided by the hospital, he needs to make the payment. Also, bills generated from the surgery of the patient need to be paid. It is also the hospital’s responsibility to store the records of patients who are deceased.
                     </p>
                 </div>
+                <!-- <div class="column">
+                    <?php
+                        include("globals.php");
+                        $database="hospital";
+                        $mysqli = new mysqli("localhost", $username, $password, $database);
+                        $patient_count_query = "SELECT COUNT(*) AS total FROM patient";
+                        $employee_count_query = "SELECT COUNT(*) AS total FROM employee";
+                        $surgery_count_query = "SELECT COUNT(*) AS total FROM surgery";
+                        $revenue_count_query = "SELECT ROUND(SUM(amount), 0) AS total FROM billing";
+                        $ot_count_query = "SELECT COUNT(*) AS total FROM operation_theatre WHERE availability = 0";
+                        $patient_result = $mysqli->query($patient_count_query);
+                        $employee_result = $mysqli->query($employee_count_query);
+                        $surgery_result = $mysqli->query($surgery_count_query);
+                        $revenue_result = $mysqli->query($revenue_count_query);
+                        $ot_result = $mysqli->query($ot_count_query);
+                        if($patient_result && $employee_result && $surgery_result && $revenue_result && $ot_result){
+                            echo '<table class="table table-dark">
+                                <thead>
+                                    <tr>
+                                      <th colspan="3" style="text-align:center">Hospital Stats</th>
+                                    </tr>
+                                  </thead>
+                                <body>
+                                  <tr>
+                                    <th scope="col">Patients</th>';
+                            while ($row = $patient_result->fetch_assoc()) {
+                                $fieldname = $row["total"];
+                                echo '<td> '.$fieldname.' </td> </tr>';
+                            }
+                            echo '<tr> <th scope="col">Employees</th>';
+                            while ($row = $employee_result->fetch_assoc()) {
+                                    $fieldname = $row["total"];
+                                    echo '<td> '.$fieldname.' </td></tr>';
+                                }
+                            echo '<tr> <th scope="col">Surgeries</th>';
+                            while ($row = $surgery_result->fetch_assoc()) {
+                                $fieldname = $row["total"];
+                                echo '<td> '.$fieldname.' </td></tr>';
+                            }
+                            echo '<tr> <th scope="col">OT\'s available</th>';
+                            while ($row = $ot_result->fetch_assoc()) {
+                                $fieldname = $row["total"];
+                                echo '<td> '.$fieldname.' </td></tr>';
+                            }
+                            echo '<tr> <th scope="col">Revenue Generated So Far</th>';
+                            while ($row = $revenue_result->fetch_assoc()) {
+                                $fieldname = $row["total"];
+                                echo '<td> '.$fieldname.' </td></tr>';
+                            }
+                            echo '</tbody></table>';
+                            $patient_result->free();
+                            $employee_result->free();
+                            $surgery_result->free();
+                        }
+                    ?>
+                </div> -->
             </div>
         </div>
     </body>

@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <title>Surgery</title>
 </head>
 <body style="background-color:#383A59; color:white">
@@ -55,17 +56,34 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
-        <form method="post" action="operation_theatre.php">
-            <div class="btn-group-vertical">
-            <input class="btn btn-primary" type="submit" name="addOperationTheatre" class="button" value="add operation theatre" />
-            <input class="btn btn-primary" type="submit" name="editOperationTheatre" class="button" value="edit operation theatre" />
-            <input class="btn btn-primary" type="submit" name="deleteOperationTheatre" class="button" value="delete operation theatre" />
-            <input class="btn btn-primary" type="submit" name="showOperationTheatre" class="button" value="show operation theatre" />
-            <input class="btn btn-primary" type="submit" name="filterOperationTheatre" class="button" value="filter operation theatre" />
+    <form method="post" action="operation_theatre.php">
+        <div class="container">
+            <div style="margin:5%;display:flex;justify-content:center">
+            <span class="btn btn-primary btn-block">
+                <i class="fas fa-plus-circle"></i> <input class="btn btn-primary btn-block" type="submit" name="addOperationTheatre" class="button" value="Add New OT" />
+            </span>
             </div>
-        </form>
-    </div>
-    
+            <div style="margin:5%;display:flex;justify-content:center">
+            <span class="btn btn-primary btn-block">
+                <i class="fas fa-edit"></i> <input class="btn btn-primary btn-block" type="submit" name="editOperationTheatre" class="button" value="Edit OT details" />
+            </span>
+            </div>
+            <div style="margin:5%;display:flex;justify-content:center">
+            <span class="btn btn-primary btn-block">
+                <i class="far fa-trash-alt"></i> <input class="btn btn-primary btn-block" type="submit" name="deleteOperationTheatre" class="button" value="Delete OT entry" />
+            </span>
+            </div>
+            <div style="margin:5%;display:flex;justify-content:center">
+            <span class="btn btn-primary btn-block">
+                <i class="fas fa-eye"></i> <input class="btn btn-primary btn-block" type="submit" name="showOperationTheatre" class="button" value="View OT" />
+            </span>
+            </div>
+            <div style="margin:5%;display:flex;justify-content:center">
+            <span class="btn btn-primary btn-block">
+                <i class="fas fa-filter"></i> <input class="btn btn-primary btn-block" type="submit" name="filterOperationTheatre" class="button" value="Filter OT details" />
+            </span>
+            </div> 
+        </div>
+    </form> 
 </body>
 </html>
