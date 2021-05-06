@@ -32,42 +32,7 @@
               </form>';
     }
     function showPatient() {
-        try {
-            include '../globals.php';
-            $database = "hospital";
-            $table = "patient";
-            $mysqli = new mysqli("localhost", $username, $password, $database);
-            echo "<h2>PATIENT</h2><ol>";
-            $query = "SELECT * FROM patient";
-            $result = $mysqli->query($query);
-            echo '<table border="1" cellspacing="2" cellpadding="2"> 
-                <tr> 
-                    <td> <font face="Monospace">ID</font> </td> 
-                    <td> <font face="Monospace">Name</font> </td> 
-                    <td> <font face="Monospace">Address</font> </td> 
-                    <td> <font face="Monospace">Contact Number</font> </td>
-                    <td> <font face="Monospace">Gender</font> </td>
-                </tr>';
-            while ($row = $result->fetch_assoc()) {
-                  $field1name = $row["id"];
-                  $field2name = $row["name"];
-                  $field3name = $row["address"];
-                  $field4name = $row["contact_number"];
-                  $field5name = $row["gender"];
-                  echo '<tr> 
-                            <td> <font face="Monospace">'.$field1name.'</td> 
-                            <td> <font face="Monospace">'.$field2name.'</td> 
-                            <td> <font face="Monospace">'.$field3name.'</td> 
-                            <td> <font face="Monospace">'.$field4name.'</td> 
-                            <td> <font face="Monospace">'.$field5name.'</td> 
-                        </tr>';
-            }
-            $result->free();
-            echo "</ol>";
-          } catch (mysqli_sql_exception $e) {
-              print "Error!: " . $e->getMessage() . "<br/>";
-              die();
-          }
+        include 'show_patient.php';
     }
     function editPatient(){
         echo '<h2 style="margin-top:5%;margin-left:40%;">Edit Patient Details</h2>

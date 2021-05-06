@@ -48,22 +48,23 @@
         function Signup(){
             try {
                 $admin_username="root";
-                $admin_password="Saivipul@1729";
+                $admin_password="";
                 $username=$_POST["uname"];
                 $password=$_POST["psw"];
                 $database="hospital";
                 $mysqli = new mysqli("localhost", $admin_username, $admin_password, $database);
                 $create_user_query = "CREATE user '$username' IDENTIFIED BY '$password'";
                 $grant_priv_query = "GRANT SELECT ON $database.* TO $username";
-                echo $grant_priv_query;
+                $grant_priv_query1 = "GRANT EXECUTE ON $database.* TO $username";
                 $result = $mysqli->query($create_user_query);
                 $result = $mysqli->query($grant_priv_query);
+                $result = $mysqli->query($grant_priv_query1);
                 echo '<script>alert("Account Created")</script>';
                 $var_str1 = var_export($username, true);
                 $var_str2 = var_export($password, true);
                 $var1 = "<?php\n\$username=$var_str1; \n\$password=$var_str2;\n?>";
                 file_put_contents('../globals.php', $var1);
-                // header('Location: ../user.html');
+                header('Location: ../user.html');
             } catch (mysqli_sql_exception $e) {
                 print "Error!: " . $e->getMessage() . "<br/>";
                 die();
