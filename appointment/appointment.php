@@ -47,11 +47,11 @@
                 try {
                     $username = "root";
                     $password = "aMRm$2018";
-                    $database = "hosp";
-                    $table = "Appointment";
+                    $database = "hospital";
+                    $table = "appointment";
                     $mysqli = new mysqli("localhost", $username, $password, $database);
                     echo "<h2>Appointments</h2><ol>";
-                    $query = "SELECT * FROM Appointment";
+                    $query = "SELECT * FROM appointment";
                     $result = $mysqli->query($query);
                     echo '<table border="1" cellspacing="2" cellpadding="2"> 
                         <tr> 
@@ -64,8 +64,8 @@
                         </tr>';
                      
                     while ($row = $result->fetch_assoc()) {
-                          $field1name = $row["ID"];
-                          $field2name = $row["patient_ID"];
+                          $field1name = $row["id"];
+                          $field2name = $row["patient_id"];
                           $field3name = $row["patient_name"];
                           
                           $field5name = $row["date_and_time"];

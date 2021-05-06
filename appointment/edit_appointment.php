@@ -11,13 +11,14 @@
             try {
                 $username = "root";
                 $password = "aMRm$2018";
-                $database = "hosp";
+                $database = "hospital";
                 $table = "appointment";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
-                $query = "update Appointment set ID = '$APPOINTMENT_ID', patient_ID = '$APPOINTMENT_PATIENT_ID', patient_name = '$APPOINTMENT_PATIENT_NAME',  date_and_time = '$APPOINTMENT_DATE_TIME',reason='$APPOINTMENT_REASON' where id = '$APPOINTMENT_ID'";
+                $query = "update appointment set id = '$APPOINTMENT_ID', patient_id = '$APPOINTMENT_PATIENT_ID', patient_name = '$APPOINTMENT_PATIENT_NAME',  date_and_time = '$APPOINTMENT_DATE_TIME',reason='$APPOINTMENT_REASON' where id = '$APPOINTMENT_ID'";
+                echo "$query";
                 $result = $mysqli->query($query);
                 if ($result == 1){
-                    echo "successfully added<br>";
+                    echo "successfully edit<br>";
                     echo "$APPOINTMENT_ID<br>";
                     echo "$APPOINTMENT_PATIENT_ID<br>";
                     echo "$APPOINTMENT_PATIENT_NAME<br>";

@@ -10,10 +10,11 @@
             try {
                 $username = "root";
                 $password = "aMRm$2018";
-                $database = "hosp";
-                $table = "Appointment";
+                $database = "hospital";
+                $table = "appointment";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
-                $query = "INSERT INTO Appointment (ID, patient_ID, patient_name, date_and_time,reason ) VALUES ('$APPOINTMENT_ID', '$APPOINTMENT_PATIENT_ID', '$APPOINTMENT_PATIENT_NAME',  '$APPOINTMENT_DATE_TIME','$APPOINTMENT_REASON')";
+                $query = "INSERT INTO appointment (id, patient_id, patient_name, date_and_time,reason ) VALUES ('$APPOINTMENT_ID', '$APPOINTMENT_PATIENT_ID', '$APPOINTMENT_PATIENT_NAME',  '$APPOINTMENT_DATE_TIME','$APPOINTMENT_REASON')";
+                
                 $result = $mysqli->query($query);
                 if ($result == 1){
                     echo "successfully added<br>";
