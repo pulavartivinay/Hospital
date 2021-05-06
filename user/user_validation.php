@@ -13,14 +13,11 @@
 <body style="background-color:#383A59; color:white">
     <div class="container">
     <?php
-        echo "vinay";
     	ini_set('display_errors', 1);
-        echo "vinay12";
         if(array_key_exists('login', $_POST)) {
             Login();
         }
         else if(array_key_exists('signup', $_POST)) {
-            echo "jkl";
             Signup();
         }
         function Login(){
@@ -37,14 +34,11 @@
                 	$var1 = "<?php\n\$username=$var_str1; \n\$password=$var_str2;\n?>";
                 	file_put_contents('../globals.php', $var1);
                 	header('Location: ../home.html');
-                }
-                else
-                {
-                   echo '<script>alert("Bhayya go and create one account and try again")</script>';
+                } else {
+                   echo '<script>alert("Account Not Found")</script>';
                    echo '<form method="post" action="../user.html">
-                        <input class="btn btn-danger" type="submit" value="Back">
-                      </form>';
-                   
+                            <input class="btn btn-danger" type="submit" value="Back">
+                        </form>';
                 }
             } catch (mysqli_sql_exception $e) {
                 print "Error!: " . $e->getMessage() . "<br/>";
@@ -52,24 +46,22 @@
             }
         }
         function Signup(){
-        	echo "hi";
             try {
                 $username=$_POST["uname"];
                 $password=$_POST["psw"];
                 $database="hospital";
-                $mysqli = new mysqli("localhost", "root", "", $database);
-                $query = "CREATE user '$username' IDENTIFIED BY '$password'";
-                $query1 = "GRANT role1 TO '$username'";
-                $query2 = "set role role1";
-                $result = $mysqli->query($query);
-                $result = $mysqli->query($query1);
-                $result = $mysqli->query($query2);
+                $mysqli = new mysqli("localhost", "root", "Saivipul@1729", $database);
+                $create_user_query = "CREATE user '$username' IDENTIFIED BY '$password'";
+                $grant_priv_query = "GRANT SELECT ON $database.* TO $username";
+                echo $grant_priv_query;
+                $result = $mysqli->query($create_user_query);
+                $result = $mysqli->query($grant_priv_query);
                 echo '<script>alert("Account Created")</script>';
                 $var_str1 = var_export($username, true);
                 $var_str2 = var_export($password, true);
                 $var1 = "<?php\n\$username=$var_str1; \n\$password=$var_str2;\n?>";
                 file_put_contents('../globals.php', $var1);
-                header('Location: ../user.html');
+                // header('Location: ../user.html');
             } catch (mysqli_sql_exception $e) {
                 print "Error!: " . $e->getMessage() . "<br/>";
                 die();
