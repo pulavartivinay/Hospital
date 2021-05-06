@@ -25,24 +25,27 @@
                 <thead class=thead-dark>
                     <tr> 
                         <th> ID </th> 
-                        <th> Name </th>
-                        <th> Address </th> 
-                        <th> Contact Number </th> 
-                        <th> Gender </th>
+                        <th> Type </th>
+                        <th> Patient_ID </th>
+                        <th> Amount </th>
+                        <th> Date </th> 
+                        <th> Contact Number </th>
                     </tr>
                 </thead>';
             while ($row = $result->fetch_assoc()) {
                     $field1name = $row["id"];
-	            $field2name = $row["name"];
-	            $field3name = $row["address"];
-	            $field4name = $row["contact_number"];
-	            $field5name = $row["gender"];
+                    $field2name = $row["type"];
+                    $field3name = $row["patient_id"];
+                    $field4name = $row["amount"];
+                    $field5name = $row["date"];
+                    $field6name = $row["contact_number"];
                     echo '<tr> 
                             <td> '.$field1name.'</td> 
                             <td> '.$field2name.'</td> 
                             <td> '.$field3name.'</td> 
                             <td> '.$field4name.'</td> 
-                            <td> '.$field5name.'</td> 
+                            <td> '.$field5name.'</td>
+                            <td> '.$field6name.'</td> 
                         </tr>';
             }
             $result->free();

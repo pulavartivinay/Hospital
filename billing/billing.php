@@ -54,45 +54,7 @@
               </form>';
     }
     function showBilling() {
-        try {
-            include '../globals.php';
-            $database = "hospital";
-            $table = "billing";
-            $mysqli = new mysqli("localhost", $username, $password, $database);
-            echo "<h2>BILLING</h2><ol>";
-            $query = "SELECT * FROM billing";
-            $result = $mysqli->query($query);
-            echo '<table border="1" cellspacing="2" cellpadding="2"> 
-                <tr> 
-                    <td> <font face="Monospace">ID</font> </td> 
-                    <td> <font face="Monospace">Type</font> </td> 
-                    <td> <font face="Monospace">Patient_ID</font> </td>
-                    <td> <font face="Monospace">Amount</font> </td> 
-                    <td> <font face="Monospace">Date</font> </td>
-                    <td> <font face="Monospace">Contact Number</font> </td>
-                </tr>';
-            while ($row = $result->fetch_assoc()) {
-                  $field1name = $row["id"];
-                  $field2name = $row["type"];
-                  $field3name = $row["patient_id"];
-                  $field4name = $row["amount"];
-                  $field5name = $row["date"];
-                  $field6name = $row["contact_number"];
-                  echo '<tr> 
-                            <td> <font face="Monospace">'.$field1name.'</td> 
-                            <td> <font face="Monospace">'.$field2name.'</td> 
-                            <td> <font face="Monospace">'.$field3name.'</td> 
-                            <td> <font face="Monospace">'.$field4name.'</td> 
-                            <td> <font face="Monospace">'.$field5name.'</td>
-                            <td> <font face="Monospace">'.$field6name.'</td> 
-                        </tr>';
-            }
-            $result->free();
-            echo "</ol>";
-          } catch (mysqli_sql_exception $e) {
-              print "Error!: " . $e->getMessage() . "<br/>";
-              die();
-          }
+        include 'show_billing.php';
     }
     function searchBilling() {
         try {
