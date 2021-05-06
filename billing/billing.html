@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Billing</title>
 </head>
-<body>
+<body style="background-color:#383A59; color:white">
     <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark justify-content-between">
         <a class="navbar-brand" href="../index.html">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,24 +43,39 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../nurse/nurse.html">Nurse</a>
                 </li>
-                <li style="float: right;" class="nav-text dropdown">
+           	<li style="float: right;" class="nav-text dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown link
+                        Account
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Sign In</a>
                         <a class="dropdown-item" href="#">Sign Up</a>
                     </div>
                 </li>
-            </ul>
+           </ul>
         </div>
     </nav>
+    <h2>Billing Section</h2>
     <form method="post" action="billing.php">
-        <input type="submit" name="addBilling" class="button" value="add billing" />
-        <input type="submit" name="editBilling" class="button" value="edit billing" />
-        <input type="submit" name="deleteBilling" class="button" value="delete billing" />
-        <input type="submit" name="showBilling" class="button" value="show billing" />
+        <input style="margin: 5% 20px 10px 30%" type="submit" name="addBilling" class="button" value="add billing" />
+        <input style="margin: 10px 20px 10px 10px" type="submit" name="editBilling" class="button" value="edit billing" />
+        <input style="margin: 10px 20px 10px 10px" type="submit" name="deleteBilling" class="button" value="delete billing" />
+        <input style="margin: 10px 20px 10px 10px" type="submit" name="showBilling" class="button" value="show billing" />
+        <div style="margin: 5% 20px 0px 30%">
+        	<h3>Search the billing using contact number</h3>
+        	<form action="billing.php">
+			<input style="margin: 3% 0px 0px 10%" type="text" name="searchBilling" 				placeholder="Enter contact number...">
+			<button type="submit"><i class="fa fa-search"></i></button>
+		</form>
+        </div>
     </form>
+    <form method="post" action="billing.php">
+    	<div style="margin: 5% 20px 0px 30%">
+        	<h3>Get the patient ID's by searching the payment service type availed</h3>
+        	<input style="margin: 3% 0px 0px 10%" type="text" name="service" placeholder="Enter mode of payment...">
+        	<button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+    </from>
     
 </body>
 </html>
