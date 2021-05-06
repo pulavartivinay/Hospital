@@ -23,8 +23,8 @@
             }
             function addPatient() {
                 echo '<form method="post" action="add_nurse.php">
-                		ID: <input type="text" name="id"><br>
-                        Name: <input type="text" name="name"><br>
+                		ID: <input type="text" name="id" required><br>
+                        Name: <input type="text" name="name" required><br>
                         Experience: <input type="text" name="experience"><br>
                         
                         date_joined: <input type="text" name="date_joined"><br>
@@ -36,8 +36,8 @@
             }
             function editPatient() {
                 echo '<form method="post" action="edit_nurse.php">
-                        ID: <input type="text" name="id"><br>
-                        Name: <input type="text" name="name"><br>
+                        ID: <input type="text" name="id" required><br>
+                        Name: <input type="text" name="name" required><br>
                         Experience: <input type="text" name="experience"><br>
                         
                         date_joined: <input type="text" name="date_joined"><br>
@@ -49,7 +49,7 @@
             }
             function deletePatient() {
                 echo '<form method="post" action="delete_nurse.php">
-                		ID: <input type="text" name="id"><br>
+                		ID: <input type="text" name="id" required><br>
                         <input type="submit" value="commit">
                       </form>';
             }

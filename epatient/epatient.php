@@ -42,8 +42,8 @@
                 echo '<h2 style="margin-top:5%;margin-left:40%;">Add Emergency Patient Details</h2>
                 <form method="post" action="add_e_patient.php">
                     <div style="margin-top:1%;margin-left:40%;font-size:25px;">
-                        ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="id"><br><br><br>
-                        Name:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name"><br><br><br>
+                        ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="id" required><br><br><br>
+                        Name:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" required><br><br><br>
                         Address:  &nbsp;<input type="text" name="address"><br><br><br>
                         Contact:   &nbsp;&nbsp;<input type="text" name="contact_number"><br><br><br>
                         Gender:   &nbsp;&nbsp;&nbsp;<input type="text" name="gender"><br><br><br>
@@ -55,8 +55,8 @@
                 echo '<h2 style="margin-top:5%;margin-left:40%;">Edit Emergency Patient Details</h2>
                     <form method="post" action="edit_e_patient.php">
                         <div style="margin-top:1%;margin-left:40%;font-size:25px;">
-                            ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="id"><br><br><br>
-                            Name:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name"><br><br><br>
+                            ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="id" required><br><br><br>
+                            Name:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" required><br><br><br>
                             Address:  &nbsp;<input type="text" name="address"><br><br><br>
                             Contact:   &nbsp;&nbsp;<input type="text" name="contact_number"><br><br><br>
                             Gender:   &nbsp;&nbsp;&nbsp;<input type="text" name="gender"><br><br><br>
@@ -66,8 +66,8 @@
             }
             function deletePatient() {
                 echo '<form method="post" action="delete_e_patient.php">
-                		ID: <input type="text" name="id"><br>
-                        <input type="submit" value="commit">
+                		ID: <input type="text" name="id" required><br>
+                        <input type="submit" value="commit" >
                       </form>';
             }
             function showPatient() {
