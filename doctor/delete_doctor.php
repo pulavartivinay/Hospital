@@ -1,6 +1,7 @@
 <html>
     <body>
         <?php
+            echo '<body style="background-color:#383A59; color:white">';
             $DOCTORID=$_POST["id"];
             try {
                 include '../globals.php';
