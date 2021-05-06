@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html>
-
-
-
     <body>
-
-
 
         <h1>Hospital</h1>
         
@@ -31,7 +26,7 @@
                 		ID: <input type="text" name="id"><br>
                         Name: <input type="text" name="name"><br>
                         Experience: <input type="text" name="experience"><br>
-                        designation: <input type="text" name="designationr"><br>
+                        
                         date_joined: <input type="text" name="date_joined"><br>
                         contact: <input type="text" name="contact"><br>
                         working_hrs: <input type="text" name="working_hrs"><br>
@@ -44,7 +39,7 @@
                         ID: <input type="text" name="id"><br>
                         Name: <input type="text" name="name"><br>
                         Experience: <input type="text" name="experience"><br>
-                        designation: <input type="text" name="designation"><br>
+                        
                         date_joined: <input type="text" name="date_joined"><br>
                         contact: <input type="text" name="contact"><br>
                         working_hrs: <input type="text" name="working_hrs"><br>

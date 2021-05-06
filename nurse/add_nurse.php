@@ -5,7 +5,7 @@
             $DATA1=$_POST["id"];
             $DATA2=$_POST["name"];
             $DATA3=$_POST["experience"];
-            $DATA4=$_POST["designation"];
+            
             $DATA5=$_POST["date_joined"];
             $DATA6=$_POST["contact"];
             $DATA7=$_POST["working_hrs"];
@@ -16,7 +16,7 @@
                 $database = "hospital";
                 $table = "emergency_patient";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
-                $query = "INSERT INTO nurse (id, name, experience, designation, date_joined, contact_number, working_hours, salary) VALUES ('$DATA1','$DATA2','$DATA3', '$DATA4','$DATA5','$DATA6','$DATA7','$DATA8')";
+                $query = "INSERT INTO nurse (id, name, experience, date_joined, contact_number, working_hours, salary) VALUES ('$DATA1','$DATA2','$DATA3', '$DATA5','$DATA6','$DATA7','$DATA8')";
                 
                 
 
@@ -26,7 +26,7 @@
                     echo "$DATA1<br>";
                     echo "$DATA2<br>";
                     echo "$DATA3<br>";
-                    echo "$DATA4<br>";
+                    
                     echo "$DATA5<br>";
                     echo "$DATA6<br>";
                     echo "$DATA7<br>";
