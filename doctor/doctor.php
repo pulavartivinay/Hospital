@@ -147,11 +147,11 @@
                 try {
                     $username = "root";
                     $password = "aMRm$2018";
-                    $database = "hosp";
-                    $table = "Doctor";
+                    $database = "hospital";
+                    $table = "doctor";
                     $mysqli = new mysqli("localhost", $username, $password, $database);
                     
-                    $query = "SELECT * FROM Doctor";
+                    $query = "SELECT * FROM doctor";
                     $result = $mysqli->query($query);
                     echo '<table border="1" cellspacing="2" cellpadding="2">
                         <tr> 
@@ -166,7 +166,7 @@
                         </tr>';
                      
                     while ($row = $result->fetch_assoc()) {
-                          $field1name = $row["Id"];
+                          $field1name = $row["id"];
                           $field2name = $row["name"];
                           $field3name = $row["experience"];
                           $field4name = $row["designation"];
@@ -223,12 +223,12 @@
                try {
 			    $username = "root";
 			    $password = "aMRm$2018";
-			    $database = "hosp";
-			    $table = "Doctor";
+			    $database = "hospital";
+			    $table = "doctor";
 			    $mysqli = new mysqli("localhost", $username, $password, $database);
 			    $SEARCHDoctor=$_POST["searchDoctor"];
 			    echo "<h2>Results</h2><ol>";
-			    $query = "SELECT * FROM Doctor where CONCAT(Id, name, experience, designation, date_joined,contact_number,working_hours,salary) LIKE '%".$SEARCHDoctor."%'";
+			    $query = "SELECT * FROM doctor where CONCAT(id, name, experience, designation, date_joined,contact_number,working_hours,salary) LIKE '%".$SEARCHDoctor."%'";
 			    $result = $mysqli->query($query);
 			   echo '<table border="1" cellspacing="2" cellpadding="2">
                         <tr> 
@@ -243,7 +243,7 @@
                         </tr>';
                      
                     while ($row = $result->fetch_assoc()) {
-                          $field1name = $row["Id"];
+                          $field1name = $row["id"];
                           $field2name = $row["name"];
                           $field3name = $row["experience"];
                           $field4name = $row["designation"];

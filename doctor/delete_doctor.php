@@ -6,10 +6,10 @@
             try {
                 $username = "root";
                 $password = "aMRm$2018";
-                $database = "hosp";
-                $table = "Doctor";
+                $database = "hospital";
+                $table = "doctor";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
-                $query = "delete from Doctor where id = '$DOCTORID'";
+                $query = "delete from doctor where id = '$DOCTORID'";
                 $result = $mysqli->query($query);
                 if ($result == 1){
                     echo '<script>alert("Successfully Deleted")</script>';

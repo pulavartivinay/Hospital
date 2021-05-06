@@ -12,10 +12,10 @@
             try {
                 $username = "root";
                 $password = "aMRm$2018";
-                $database = "hosp";
-                $table = "Doctor";
+                $database = "hospital";
+                $table = "doctor";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
-                $query = "INSERT INTO Doctor (Id, name, experience, designation, date_joined,contact_number,working_hours,salary) VALUES ('$DOCTORID', '$DOCTORNAME', '$DOCTOREXPERIENCE', '$DOCTORDESIGNATION', '$DOCTORDATEJOINED','$DOCTORCONTACTNUMBER','$DOCTORWORKINGHOURS','$DOCTORSALARY')";
+                $query = "INSERT INTO doctor (id, name, experience, designation, date_joined,contact_number,working_hours,salary) VALUES ('$DOCTORID', '$DOCTORNAME', '$DOCTOREXPERIENCE', '$DOCTORDESIGNATION', '$DOCTORDATEJOINED','$DOCTORCONTACTNUMBER','$DOCTORWORKINGHOURS','$DOCTORSALARY')";
                 
                 $result = $mysqli->query($query);
                 if ($result == 1){

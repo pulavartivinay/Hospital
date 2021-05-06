@@ -13,10 +13,10 @@
             try {
                 $username = "root";
                 $password = "aMRm$2018";
-                $database = "hosp";
-                $table = "Doctor";
+                $database = "hospital";
+                $table = "doctor";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
-                $query = "update Doctor set Id = '$DOCTORID', name = '$DOCTORNAME', experience = '$DOCTOREXPERIENCE', designation = '$DOCTORDESIGNATION', date_joined = '$DOCTORDATEJOINED',contact_number='$DOCTORCONTACTNUMBER',working_hours = '$DOCTORWORKINGHOURS',salary='$DOCTORSALARY' where Id = '$DOCTORID'";
+                $query = "update doctor set id = '$DOCTORID', name = '$DOCTORNAME', experience = '$DOCTOREXPERIENCE', designation = '$DOCTORDESIGNATION', date_joined = '$DOCTORDATEJOINED',contact_number='$DOCTORCONTACTNUMBER',working_hours = '$DOCTORWORKINGHOURS',salary='$DOCTORSALARY' where id = '$DOCTORID'";
                 $result = $mysqli->query($query);
                 if ($result == 1){
                     echo '<script>alert("Successfully Edited")</script>';

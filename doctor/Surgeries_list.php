@@ -8,7 +8,7 @@
 			die("Failed connection:".$conn-> connect_error);
 
 		} 
-		$command = "SELECT patient_Id,patient_name,time_of_surgery FROM doctor_perform_surgery where Doctor_id = '$DOCTORID'";
+		$command = "SELECT patient_id,patient_name,time_of_surgery FROM doctor_perform_surgery where doctor_id = '$DOCTORID'";
 		$ans = $conn->query($command);
     		if(mysqli_num_rows($ans) > 0)
     		{	
