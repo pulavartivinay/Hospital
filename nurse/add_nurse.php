@@ -22,7 +22,7 @@
 
                 $result = $mysqli->query($query);
                 if ($result == 1){
-                    echo "successfully edited<br>";
+                    echo "successfully added<br>";
                     echo "$DATA1<br>";
                     echo "$DATA2<br>";
                     echo "$DATA3<br>";
@@ -31,7 +31,7 @@
                     echo "$DATA6<br>";
                     echo "$DATA7<br>";
                     echo "$DATA8<br>";
-                    echo '<form method="post" action="nurse.php">
+                    echo '<form method="post" action="nurse.html">
                         <input type="submit" value="go back">
                       </form>';
                 } else {

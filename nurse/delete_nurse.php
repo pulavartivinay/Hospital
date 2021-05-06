@@ -15,7 +15,7 @@
                     echo "successfully deleted<br>";
                     echo "$PATIENTID<br>";
                     
-                    echo '<form method="post" action="nurse.php">
+                    echo '<form method="post" action="nurse.html">
                         <input type="submit" value="go back">
                       </form>';
                 } else {
