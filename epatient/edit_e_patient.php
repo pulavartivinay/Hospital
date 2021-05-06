@@ -22,7 +22,7 @@
                     echo "$PATIENTADDRESS<br>";
                     echo "$PATIENTCONTACT<br>";
                     echo "$PATIENTGENDER<br>";
-                    echo '<form method="post" action="epatient.php">
+                    echo '<form method="post" action="epatient.html">
                         <input type="submit" value="go back">
                       </form>';
                 } else {
