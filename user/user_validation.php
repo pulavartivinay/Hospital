@@ -13,6 +13,7 @@
 <body style="background-color:#383A59; color:white">
     <div class="container">
     <?php
+    	ini_set('display_errors', 1);
         if(array_key_exists('login', $_POST)) {
             Login();
         }
@@ -27,8 +28,8 @@
                 $mysqli = new mysqli("localhost", $username, $password, $database);
                 $var_str1 = var_export($username, true);
                 $var_str2 = var_export($password, true);
-                $var = "<?php\n\$username=$var_str1; \n\$password=$var_str2;\n?>";
-                file_put_contents('../globals.php', $var);
+                $var1 = "<?php\n\$username=$var_str1; \n\$password=$var_str2;\n?>";
+                file_put_contents('../globals.php', $var1);
                 header('Location: ../home.html');
             } catch (mysqli_sql_exception $e) {
                 print "Error!: " . $e->getMessage() . "<br/>";
