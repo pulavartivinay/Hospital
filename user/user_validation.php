@@ -13,11 +13,14 @@
 <body style="background-color:#383A59; color:white">
     <div class="container">
     <?php
+        echo "vinay";
     	ini_set('display_errors', 1);
+        echo "vinay12";
         if(array_key_exists('login', $_POST)) {
             Login();
         }
         else if(array_key_exists('signup', $_POST)) {
+            echo "jkl";
             Signup();
         }
         function Login(){
@@ -26,18 +29,51 @@
                 $password=$_POST["psw"];
                 $database="hospital";
                 $mysqli = new mysqli("localhost", $username, $password, $database);
-                $var_str1 = var_export($username, true);
-                $var_str2 = var_export($password, true);
-                $var1 = "<?php\n\$username=$var_str1; \n\$password=$var_str2;\n?>";
-                file_put_contents('../globals.php', $var1);
-                header('Location: ../home.html');
+                $query = "select 'vinay'";
+                $result = $mysqli->query($query);
+                if($result){
+                	$var_str1 = var_export($username, true);
+                	$var_str2 = var_export($password, true);
+                	$var1 = "<?php\n\$username=$var_str1; \n\$password=$var_str2;\n?>";
+                	file_put_contents('../globals.php', $var1);
+                	header('Location: ../home.html');
+                }
+                else
+                {
+                   echo '<script>alert("Bhayya go and create one account and try again")</script>';
+                   echo '<form method="post" action="../user.html">
+                        <input class="btn btn-danger" type="submit" value="Back">
+                      </form>';
+                   
+                }
             } catch (mysqli_sql_exception $e) {
                 print "Error!: " . $e->getMessage() . "<br/>";
                 die();
             }
         }
         function Signup(){
-            echo "hello";
+        	echo "hi";
+            try {
+                $username=$_POST["uname"];
+                $password=$_POST["psw"];
+                $database="hospital";
+                $mysqli = new mysqli("localhost", "root", "", $database);
+                $query = "CREATE user '$username' IDENTIFIED BY '$password'";
+                $query1 = "GRANT role1 TO '$username'";
+                $query2 = "set role role1";
+                $result = $mysqli->query($query);
+                $result = $mysqli->query($query1);
+                $result = $mysqli->query($query2);
+                echo '<script>alert("Account Created")</script>';
+                $var_str1 = var_export($username, true);
+                $var_str2 = var_export($password, true);
+                $var1 = "<?php\n\$username=$var_str1; \n\$password=$var_str2;\n?>";
+                file_put_contents('../globals.php', $var1);
+                header('Location: ../user.html');
+            } catch (mysqli_sql_exception $e) {
+                print "Error!: " . $e->getMessage() . "<br/>";
+                die();
+            }
         }
     ?>
     </div>

@@ -1,4 +1,4 @@
 <?php
-$username='admin@localhost'; 
-$password='admin';
+$username='aa'; 
+$password='aa';
 ?>
