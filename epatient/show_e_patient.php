@@ -47,6 +47,9 @@
             }
             $result->free();
             echo "</ol>";
+            echo '<form method="post" action="epatient.html">
+                        <input type="submit" value="go back">
+                      </form>';
         } catch (mysqli_sql_exception $e) {
             print "Error!: " . $e->getMessage() . "<br/>";
             die();

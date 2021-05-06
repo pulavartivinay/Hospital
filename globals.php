@@ -1,4 +1,4 @@
 <?php
-$username='pavan'; 
-$password='pavan';
+$username='root'; 
+$password='guru';
 ?>
