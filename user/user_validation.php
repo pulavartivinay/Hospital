@@ -47,8 +47,8 @@
         }
         function Signup(){
             try {
-                $admin_username="username";
-                $admin_password="password";
+                $admin_username="root";
+                $admin_password="Saivipul@1729";
                 $username=$_POST["uname"];
                 $password=$_POST["psw"];
                 $database="hospital";
