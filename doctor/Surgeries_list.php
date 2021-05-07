@@ -22,7 +22,7 @@
 			while($table_row = mysqli_fetch_array($ans))
 			{
 		    	 echo "<tr>";
-			echo "<td>" .$table_row['patient_Id']. "</td>";
+			echo "<td>" .$table_row['patient_id']. "</td>";
 			echo "<td>" .$table_row['patient_name']. "</td>";
 			echo "<td>" .$table_row['time_of_surgery']. "</td>";
 		    	echo "</tr>";
