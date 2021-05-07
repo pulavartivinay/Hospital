@@ -54,51 +54,7 @@
                       </form>';
             }
             function showPatient() {
-                try {
-                    include '../globals.php';
-                    $database = "hospital";
-                    $table = "emergency_patient";
-                    $mysqli = new mysqli("localhost", $username, $password, $database);
-                    echo "<h2>NURSE</h2><ol>";
-                    $query = "SELECT * FROM nurse";
-                    $result = $mysqli->query($query);
-                    echo '<table border="1" cellspacing="2" cellpadding="2"> 
-                        <tr> 
-                            <td> <font face="Monospace">ID</font> </td> 
-                            <td> <font face="Monospace">Name</font> </td> 
-                            <td> <font face="Monospace">Experience</font> </td> 
-                            
-                            <td> <font face="Monospace">Date Joined</font> </td>
-                            <td> <font face="Monospace">Contact</font> </td>
-                            <td> <font face="Monospace">Working Hours</font> </td>
-                            <td> <font face="Monospace">Salary</font> </td>
-                        </tr>';
-                    while ($row = $result->fetch_assoc()) {
-                          $field1name = $row["id"];
-                          $field2name = $row["name"];
-                          $field3name = $row["experience"];
-                          
-                          $field5name = $row["date_joined"];
-                          $field6name = $row["contact_number"];
-                          $field7name = $row["working_hours"];
-                          $field8name = $row["salary"];
-                          echo '<tr> 
-                                    <td> <font face="Monospace">'.$field1name.'</td> 
-                                    <td> <font face="Monospace">'.$field2name.'</td> 
-                                    <td> <font face="Monospace">'.$field3name.'</td> 
-                          
-                                    <td> <font face="Monospace">'.$field5name.'</td> 
-                                    <td> <font face="Monospace">'.$field6name.'</td> 
-                                    <td> <font face="Monospace">'.$field7name.'</td> 
-                                    <td> <font face="Monospace">'.$field8name.'</td> 
-                                </tr>';
-                    }
-                    $result->free();
-                    echo "</ol>";
-                  } catch (mysqli_sql_exception $e) {
-                      print "Error!: " . $e->getMessage() . "<br/>";
-                      die();
-                  }
+                include 'show_nurse.php';
             }
             function searchPatient(){
                 try {
